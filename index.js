@@ -151,12 +151,16 @@ const testVeryBig = () => {
   console.log("\n--\n")
 }
 
-if (isTestRun) {
-  testRandom(5);
-  testVeryBig();
-} else {
-  const input = JSON.parse(process.argv[2]);
-  console.log(dumpLot(input));
-  const spot = findTheBestSpot(input);
-  console.log(`The closest open spot is ${spot[0]} (${spot[1]})`)
+if (require.main === module) {
+  if (isTestRun) {
+    testRandom(5);
+    testVeryBig();
+  } else {
+    const input = JSON.parse(process.argv[2]);
+    console.log(dumpLot(input));
+    const spot = findTheBestSpot(input);
+    console.log(`The closest open spot is ${spot[0]} (${spot[1]})`)
+  }
 }
+
+module.exports = SOLUTION;
