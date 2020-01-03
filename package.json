@@ -1,0 +1,11 @@
+{
+  "name": "parking-lot",
+  "version": "1.0.0",
+  "description": "Finds the closest 0 in a 2D matrix.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js --test"
+  },
+  "author": "Jorgen Hookham",
+  "license": "ISC"
+}
